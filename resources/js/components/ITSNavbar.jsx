@@ -11,20 +11,19 @@ function ITSNavbar() {
     }, []);
     return (
     <div>
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary nav1">
       <Container>
       <Navbar.Brand href="/">
         <img src={imgs} className="gic-logo" alt="Facebook"/>
     </Navbar.Brand>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-        <Navbar.Brand href="#home">グローバルイノベーションコンサルティング株式会社</Navbar.Brand>
+        <Navbar.Brand href="#home" className="brand_title">グローバルイノベーションコンサルティング株式会社</Navbar.Brand>
         </Nav>
       </Navbar.Collapse>
     </Container>
     </Navbar>
-
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary nav2">
     <Container>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
