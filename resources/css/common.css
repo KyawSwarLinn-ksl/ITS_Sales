@@ -2,9 +2,11 @@
     width: 35px;
     height: 35px;
 }
+
 .sys_body {
     background-color: #4fbba712;
     height: 500px !important;
+    font-size: 14px !important;
 }
 
 .brand_title {
@@ -19,4 +21,14 @@
 .nav2 {
     box-shadow: 1.04275vw -0.04275vw 0.4vw 0px rgba(0, 0, 0, 0.16);
     padding: 1px !important;
+     font-weight: 600 !important; 
+}
+
+.home_icon {
+    font-size: 16px !important;
+    padding-top: 4px !important;
+}
+
+.dropdown_item {
+    font-size: 14px !important;
 }
