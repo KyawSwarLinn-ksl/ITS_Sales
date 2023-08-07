@@ -5,7 +5,7 @@ import { Nav,Navbar,NavDropdown } from "react-bootstrap";
 import imgs from "/images/gic_logo.png";
 import { BsFillHouseFill } from "react-icons/bs";
 import "../../../css/common.css";
-
+import { Link } from "react-router-dom";
 function ITSNavbar() {
     useEffect(() => {
 
@@ -19,7 +19,10 @@ function ITSNavbar() {
     </Navbar.Brand>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-        <Navbar.Brand href="#home" className="brand_title">グローバルイノベーションコンサルティング株式会社</Navbar.Brand>
+        <Navbar.Brand href="#engineerInsert" className="brand_title">
+          <Link to="/home">
+              グローバルイノベーションコンサルティング株式会社
+          </Link></Navbar.Brand>
         </Nav>
       </Navbar.Collapse>
     </Container>
@@ -29,12 +32,12 @@ function ITSNavbar() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
-          <span className="home_icon"><BsFillHouseFill /></span><Nav.Link href="#">ホーム</Nav.Link>
+          <span className="home_icon"><BsFillHouseFill /></span><Nav.Link to="/home"> <Link to="/home">ホーム</Link></Nav.Link>
           <NavDropdown title="技術者管理" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1" className="dropdown_item">技術者情報一覧</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2" className="dropdown_item">技術者情報登録</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" className="dropdown_item">技術者一覧詳細検索</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" className="dropdown_item">技術者一覧検索結果表示設定</NavDropdown.Item>            
+            <NavDropdown.Item className="dropdown_item"><Link to="/engineerList">技術者情報一覧</Link></NavDropdown.Item>
+            <NavDropdown.Item className="dropdown_item"><Link to="/engineerInsert">技術者情報登録</Link></NavDropdown.Item>
+            <NavDropdown.Item className="dropdown_item"><Link to="/engineerSearch">技術者一覧詳細検索</Link></NavDropdown.Item>
+            <NavDropdown.Item className="dropdown_item"><Link to="/engineerSearchResult">技術者一覧検索結果表示設定</Link></NavDropdown.Item>            
           </NavDropdown>
           <NavDropdown title="受・発注管理" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1" className="dropdown_item">受・発注情報一覧</NavDropdown.Item>
