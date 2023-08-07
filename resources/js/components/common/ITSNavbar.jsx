@@ -10,6 +10,16 @@ function ITSNavbar() {
     useEffect(() => {
 
     }, []);
+
+    const UserMenu = (
+        <img
+          src={'https://github.com/mshaaban0.png'}
+          alt="UserName profile image"
+          style={{ width: '40px' }}
+          className="rounded-circle shadow-4-strong"
+        />
+      )
+
     return (
     <div>
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary nav1">
@@ -19,7 +29,7 @@ function ITSNavbar() {
     </Navbar.Brand>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-        <Navbar.Brand href="#engineerInsert" className="brand_title">
+        <Navbar.Brand href="#engineerInsert" className="brand-title">
           <Link to="/home">
               グローバルイノベーションコンサルティング株式会社
           </Link></Navbar.Brand>
@@ -37,20 +47,28 @@ function ITSNavbar() {
             <NavDropdown.Item className="dropdown_item"><Link to="/engineerList">技術者情報一覧</Link></NavDropdown.Item>
             <NavDropdown.Item className="dropdown_item"><Link to="/engineerInsert">技術者情報登録</Link></NavDropdown.Item>
             <NavDropdown.Item className="dropdown_item"><Link to="/engineerSearch">技術者一覧詳細検索</Link></NavDropdown.Item>
-            <NavDropdown.Item className="dropdown_item"><Link to="/engineerSearchResult">技術者一覧検索結果表示設定</Link></NavDropdown.Item>            
+            <NavDropdown.Item className="dropdown_item"><Link to="/engineerSearchResult">技術者一覧検索結果表示設定</Link></NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="受・発注管理" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1" className="dropdown_item">受・発注情報一覧</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2" className="dropdown_item">受・発注情報登録</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" className="dropdown_item">受・発注情報一覧詳細検索</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" className="dropdown_item">受・発注情報一覧検索結果表示設定</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.1" className="dropdown-item">受・発注情報一覧</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2" className="dropdown-item">受・発注情報登録</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3" className="dropdown-item">受・発注情報一覧詳細検索</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3" className="dropdown-item">受・発注情報一覧検索結果表示設定</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Offshore請負P(仕掛状況)" className="drop_down" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1" className="dropdown_item">売上</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2" className="dropdown_item">仕掛状況登録</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.1" className="dropdown-item">売上</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2" className="dropdown-item">仕掛状況登録</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
+      <Nav>
+
+            <NavDropdown title={UserMenu} id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1" className="dropdown-item">パスワード変更</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2" className="dropdown-item">ログアウト</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#deets" className="login-user-name">チョー様</Nav.Link>
+          </Nav>
     </Container>
   </Navbar>
   </div>
