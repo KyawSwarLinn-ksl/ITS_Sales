@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class EngineerSearch extends React.Component {
+class SearchEngineer extends React.Component {
     render() {
         return (
             <div>
@@ -10,5 +10,5 @@ class EngineerSearch extends React.Component {
         );
     }
 }
-export default EngineerSearch;
-ReactDOM.render(<EngineerSearch />, document.getElementById("app"));
+export default SearchEngineer;
+ReactDOM.render(<SearchEngineer />, document.getElementById("app"));

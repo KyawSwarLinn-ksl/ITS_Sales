@@ -29,10 +29,9 @@ function ITSNavbar() {
     </Navbar.Brand>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-        <Navbar.Brand href="#engineerInsert" className="brand-title">
-          <Link to="/home">
+          <Navbar.Brand href="/" className="brand_title">
               グローバルイノベーションコンサルティング株式会社
-          </Link></Navbar.Brand>
+          </Navbar.Brand>
         </Nav>
       </Navbar.Collapse>
     </Container>
@@ -42,33 +41,32 @@ function ITSNavbar() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
-          <span className="home_icon"><BsFillHouseFill /></span><Nav.Link to="/home"> <Link to="/home">ホーム</Link></Nav.Link>
+          <span className="home-icon"><BsFillHouseFill /></span><Nav.Link  href="/home">ホーム</Nav.Link>
           <NavDropdown title="技術者管理" id="collasible-nav-dropdown">
-            <NavDropdown.Item className="dropdown_item"><Link to="/engineerList">技術者情報一覧</Link></NavDropdown.Item>
-            <NavDropdown.Item className="dropdown_item"><Link to="/engineerInsert">技術者情報登録</Link></NavDropdown.Item>
-            <NavDropdown.Item className="dropdown_item"><Link to="/engineerSearch">技術者一覧詳細検索</Link></NavDropdown.Item>
-            <NavDropdown.Item className="dropdown_item"><Link to="/engineerSearchResult">技術者一覧検索結果表示設定</Link></NavDropdown.Item>
+            <NavDropdown.Item href="/engineerList" className="dropdown_item">技術者情報一覧</NavDropdown.Item>
+            <NavDropdown.Item href="/insertEngineer" className="dropdown_item">技術者情報登録</NavDropdown.Item>
+            <NavDropdown.Item href="/searchEngineer" className="dropdown_item">技術者一覧詳細検索</NavDropdown.Item>
+            <NavDropdown.Item href="/engineerSearchResult" className="dropdown_item">技術者一覧検索結果表示設定</NavDropdown.Item>            
           </NavDropdown>
           <NavDropdown title="受・発注管理" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1" className="dropdown-item">受・発注情報一覧</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2" className="dropdown-item">受・発注情報登録</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" className="dropdown-item">受・発注情報一覧詳細検索</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" className="dropdown-item">受・発注情報一覧検索結果表示設定</NavDropdown.Item>
+            <NavDropdown.Item href="/orderList" className="dropdown_item">受・発注情報一覧</NavDropdown.Item>
+            <NavDropdown.Item href="/insertOrder" className="dropdown_item">受・発注情報登録</NavDropdown.Item>
+            <NavDropdown.Item href="/searchOrder" className="dropdown_item">受・発注情報一覧詳細検索</NavDropdown.Item>
+            <NavDropdown.Item href="/orderSearchResult" className="dropdown_item">受・発注情報一覧検索結果表示設定</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Offshore請負P(仕掛状況)" className="drop_down" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1" className="dropdown-item">売上</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2" className="dropdown-item">仕掛状況登録</NavDropdown.Item>
+            <NavDropdown.Item href="/sales" className="dropdown_item">売上</NavDropdown.Item>
+            <NavDropdown.Item href="/insertProgressStatus" className="dropdown_item">仕掛状況登録</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
       <Nav>
-
-            <NavDropdown title={UserMenu} id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1" className="dropdown-item">パスワード変更</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2" className="dropdown-item">ログアウト</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#deets" className="login-user-name">チョー様</Nav.Link>
-          </Nav>
+        <NavDropdown title={UserMenu} id="collasible-nav-dropdown" className="user-image">
+            <NavDropdown.Item href="#action/3.1" className="dropdown-item">パスワード変更</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2" className="dropdown-item">ログアウト</NavDropdown.Item>
+        </NavDropdown>
+        <Nav.Link href="#deets" className="login-user-name">チョー様</Nav.Link>
+      </Nav>
     </Container>
   </Navbar>
   </div>

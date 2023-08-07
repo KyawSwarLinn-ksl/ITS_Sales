@@ -21,12 +21,13 @@
 .nav2 {
     box-shadow: 1.04275vw -0.04275vw 0.4vw 0px rgba(0, 0, 0, 0.16);
     padding: 1px !important;
-     font-weight: 600 !important;
+    font-weight: 600 !important;
+    height: 45px;
 }
 
 .home-icon {
     font-size: 16px !important;
-    padding-top: 4px !important;
+    padding-top: 3px !important;
 }
 
 .dropdown-item {
