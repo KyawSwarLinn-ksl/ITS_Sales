@@ -20,25 +20,29 @@ class ItsRouter extends React.Component {
         return (
             <React.Fragment>
                  <BrowserRouter>
-                    <div>
+                 <div className="container-fluid">
+                    <div className="row flex-nowrap">
                         <ITSNavbar/>
-                        <Switch>
-                            <Route exact path={"/"} component={Home} />
-                            <Route exact path={"/home"} component={Home} />
-                            <Route exact path={"/engineerList"} component={EngineerList} />
-                            <Route exact path={"/insertEngineer"} component={InsertEngineer} />
-                            <Route exact path={"/searchEngineer"} component={SearchEngineer} />
-                            <Route exact path={"/engineerSearchResult"} component={EngineerSearchResult} />
+                        <div className="col py-3">
+                            <Switch>
+                                <Route exact path={"/"} component={Home} />
+                                <Route exact path={"/home"} component={Home} />
+                                <Route exact path={"/engineerList"} component={EngineerList} />
+                                <Route exact path={"/insertEngineer"} component={InsertEngineer} />
+                                <Route exact path={"/searchEngineer"} component={SearchEngineer} />
+                                <Route exact path={"/engineerSearchResult"} component={EngineerSearchResult} />
 
-                            <Route exact path={"/orderList"} component={OrderList} />
-                            <Route exact path={"/insertOrder"} component={InsertOrder} />
-                            <Route exact path={"/searchOrder"} component={SearchOrderDetail} />
-                            <Route exact path={"/orderSearchResult"} component={OrderDetailSearchResult} />
+                                <Route exact path={"/orderList"} component={OrderList} />
+                                <Route exact path={"/insertOrder"} component={InsertOrder} />
+                                <Route exact path={"/searchOrder"} component={SearchOrderDetail} />
+                                <Route exact path={"/orderSearchResult"} component={OrderDetailSearchResult} />
 
-                            <Route exact path={"/sales"} component={Sales} />
-                            <Route exact path={"/insertProgressStatus"} component={InsertProgressStatus} />
-                        </Switch>
+                                <Route exact path={"/sales"} component={Sales} />
+                                <Route exact path={"/insertProgressStatus"} component={InsertProgressStatus} />
+                            </Switch>
+                        </div>
                     </div>
+                </div>
                </BrowserRouter>
             </React.Fragment>
         );
